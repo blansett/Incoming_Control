@@ -1,0 +1,129 @@
+textarea:focus, input:focus {
+    outline: none;
+}
+
+input {
+    caret-color: #000000;
+    padding: 0;
+    color: #D0C9D6;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.wrap__form {
+    position: absolute;
+    width: 481px;
+    height: 392px;
+    left: 26.56%;
+    right: 26.46%;
+    top: 4.04%;
+    bottom: 44.92%;
+    background: #F7F5F9;
+    border-radius: 12px;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.wrap__form__name__text {
+    width: 168px;
+    height: 20px;
+    margin-left: 40px;
+    margin-top: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #3B3D43;
+}
+
+.wrap__form__component {
+    width: 401px;
+    height: 48px;
+    margin-left: 40px;
+    margin-top: 25px;
+    background: #FFFFFF;
+    box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+    border-radius: 6px;
+}
+
+.wrap__form__component input {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    width: 398px;
+    height: 48px;
+    text-indent: 15px;
+    transition: 0.3s;
+}
+
+.wrap__form__component input:focus {
+    border: 1px solid #854FC8;
+    box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.wrap__form__component input:hover {
+    border: 1px solid #854FC8;
+    box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+#button {
+    background: #6979F8;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#button:hover {
+    background: #854FC8;
+    transition: 0.3s;
+}
+
+#button p {
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 22px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13px;
+}
+
+#result_form {
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 22px;
+    align-items: center;
+    text-align: center;
+    color: red;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+}

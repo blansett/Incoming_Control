@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>DS Academy | Incoming control</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="jquery.maskedinput.js"></script>
+    </head>
+    <body>
+        <div class="wrap__form">
+            <div class="wrap__form__name">
+                <p class="wrap__form__name__text">Задать вопрос</p>
+            </div>
+            <form action="https://60376bfd5435040017722533.mockapi.io/form" method="post" id="ajax_form" name="form">
+                <div class="wrap__form__component"><input required id="name" name="name" type="text" placeholder="Фамилия Имя Отчество *" pattern="([а-яА-Я',.-]+( [а-яА-Я',.-]+)*){2,30}" title="Допустимы только буквы русского алфавита, пробелы, тире."></div>
+
+                <!--pattern="([а-яА-Я',.-]+( [а-яА-Я',.-]+)*){2,30}"-->
+
+                <div class="wrap__form__component"><input required id="phone" name="phone" type="text" placeholder="Телефон *" title="Допустимы только цифры 0-9, «-», «+», пробелы. Формат: +X(XXX) XXX-XX-XX."></div>
+
+                <!--pattern="[\+]\d{1}\s\d{3}\s\d{3}[\-]\d{2}[\-]\d{2}"-->
+
+                <div class="wrap__form__component"><input id="email" name="email" type="email"          placeholder="Email" title="Допустимы только буквы латинского алфавита и строковые символы."></div>
+
+                <!--pattern="[^ @]*@[^ @]*"-->
+
+                <button id="button" class="wrap__form__component" type="submit"><p>ОТПРАВИТЬ ЗАПРОС</p></button>
+            </form>
+            <div id="result_form"></div>
+        </div>
+        <script src="script.js"></script>
+        <!--<script src="ajax.js"></script>-->
+
+        <!-- [!!!] Ситуация такова, что валидация (прописанная в script.js) несовместима с ajax-запросом (ajax.js). По отдельности работают оба пункта. Если подключить их одновременно, то получим ситуацию, при которой при нажатии кнопки с неверно введенными данными (или не введёнными вовсе) ajax-запрос всё равно отправляется. Очевидно, что в данной ситуации требуется прописать соответствие подключения ajax-запроса только после того, как верификация будет пройдена (условно говоря, функция валидации вернёт значение 1), но реализовать это у меня всё же не получилось.
+
+        Исходя из этого, по-умолчанию я подключил js-валидацию, но html-запрос, хотя подключить также можно и обратный набор -- ajax-запрос и html-валидация. Чтобы подключить последний вариант, необходимо отключить script.js, подключить ajax.js, вставить pattern'ы из комментариев выше в описание input'ов и удалить action у form.-->
+    </body>
+</html>
